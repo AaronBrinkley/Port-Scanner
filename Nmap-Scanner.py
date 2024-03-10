@@ -1,6 +1,6 @@
 import nmap
 
-import re
+
 
 
 
@@ -16,15 +16,18 @@ with open('devices_file') as f:
 
 
 #User types in range of ports to be scanned
-port_range = input("Please enter port range in 'x-x' format ")
+#port_range = input("Please enter port range in 'x-x' format ")
 
 
+#Saves port scanner to a variable
 nm = nmap.PortScanner()
 
+#Runs a for loop for that prints a message with each IP address from devices_file
 for device in devices_list:
 
     print("Now Checking " + device)
 
+#Port scanner is used on each IP address from devices_file
     for port in range(port_min, port_max + 1):
         try:
 
