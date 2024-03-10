@@ -4,13 +4,14 @@ import nmap
 
 
 
-#These variables will be used as ranges for the nmap tool to scan throug
+#These variables will be used as ranges for the nmap tool to scan through
 port_min = 0
 port_max = 65535
 
 #User types in ip address of device
 #ip_address = input("Please enter the IP address for your device")
 
+#Context manager is used to open file of IP addresses 
 with open('devices_file') as f:
     devices_list = f.read().splitlines()
 
